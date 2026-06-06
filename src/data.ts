@@ -87,23 +87,11 @@ export const routes: Record<string, RouteInfo> = {
     confidence: "high", source: "https://www.fukuoka-airport.jp/access/bus2.html",
   },
   shinkansen_hkt_kkr: {
-    route: "博多 ↔ 小倉（山陽新幹線）", mode: "🚄 新幹線", runtime: "約 15–17 分", fare: "¥2,160（自由席）",
+    route: "博多 ↔ 小倉（山陽新幹線）", mode: "🚄 新幹線", runtime: "約 15–17 分", fare: "¥1,730（自由席）／¥2,160（指定席）",
     frequency: "每時約 5–10 班（のぞみ／みずほ／さくら／こだま）", operator: "JR 西日本",
     samples: ["07:04 こだま", "07:15 のぞみ", "07:36 のぞみ", "07:49 こだま", "07:53 みずほ", "08:00 のぞみ", "08:06 のぞみ", "08:15 のぞみ", "08:23 さくら"],
     notes: "小倉→博多回程（週六）例：17:14／17:34／17:43／17:54／18:07／18:14…。旺季のぞみ可能全車指定席，無自由席。",
     confidence: "high", source: "https://jr-shinkansen.net/hakata-kokura.html",
-  },
-  jr_kokura_shimonoseki: {
-    route: "小倉 ↔ 下関（JR，門司經由）", mode: "🚆 JR 在來線", runtime: "約 13–15 分", fare: "¥340",
-    frequency: "日間 20–30 分一班，尖峰 15–20 分", operator: "JR 九州＋JR 西日本",
-    samples: ["06:16", "06:34", "06:54", "12:15", "12:38", "13:11", "13:29"],
-    notes: "多為門司直通，途中僅停門司。", confidence: "high", source: "https://ekitan.com/transit/fare/sf-7614/st-6645",
-  },
-  sanden_shimonoseki_karato: {
-    route: "下関駅 ↔ 唐戶（路線巴士）", mode: "🚌 巴士", runtime: "約 7 分", fare: "¥260",
-    frequency: "多系統經停，合計頻繁；單一系統約 1–2 班/時", operator: "サンデン交通",
-    samples: ["06:26", "06:53", "12:06", "12:30", "16:17", "16:35"],
-    notes: "下関駅前各乘車處多班皆達唐戶（火の山線／北浦線等）。", confidence: "medium", source: "https://www.sandenkotsu.co.jp/bus/route_bus/bus_stop/bg_karato/",
   },
   ferry_karato_mojiko: {
     route: "唐戶 ↔ 門司港（關門連絡船）", mode: "⛴️ 渡輪", runtime: "約 5 分", fare: "¥400（兒童 ¥200）",
@@ -115,7 +103,7 @@ export const routes: Record<string, RouteInfo> = {
     route: "門司港 ↔ 小倉（JR 鹿兒島本線）", mode: "🚆 JR 在來線", runtime: "約 13–14 分", fare: "¥280",
     frequency: "日間 2–3 班/時", operator: "JR 九州",
     samples: ["07:15", "12:23", "16:42", "20:45"],
-    notes: "快速／區間快速／普通混合。¥280 為單純區間普通運賃（部分查詢顯示 ¥340）。", confidence: "medium", source: "https://www.jrkyushu-timetable.jp/",
+    notes: "✅已查證普通運賃 ¥280。快速／區間快速／普通混合，刷 Suica。", confidence: "high", source: "https://ekitan.com/transit/fare/sf-8149/st-7614",
   },
   subway_higashihie_tenjin: {
     route: "東比惠 ↔ 天神（地下鐵空港線）", mode: "🚇 地下鐵", runtime: "約 10 分", fare: "¥260",
@@ -312,7 +300,7 @@ export const days: Day[] = [
       {
         time: "約 09:00", node: "🚆", name: "東比惠 → 太宰府", jp: "地下鐵 + 西鐵電車（全程鐵路）",
         desc: "盡量走鐵路：東比惠搭地下鐵空港線到天神（約 10 分 ¥260），出站徒步約 5 分到『西鉄福岡(天神)駅』，轉西鐵電車到太宰府（¥400、約 35 分，西鉄二日市轉太宰府線；二日市↔太宰府常為觀光列車『旅人』）。全程不搭一般巴士。",
-        transport: { mode: "🚇🚆", text: "東比惠 →〔地下鐵空港線〕→ 天神（徒步轉西鉄福岡）→〔西鐵電車・二日市乗換〕→ 太宰府駅。約 50 分、約 ¥660，刷 IC 即可。", legs: ["subway_higashihie_tenjin", "nishitetsu_tenjin_dazaifu"] },
+        transport: { mode: "🚇🚆", text: "東比惠 →〔地下鐵空港線〕→ 天神（徒步轉西鉄福岡）→〔西鐵電車・二日市乗換〕→ 太宰府駅。約 50 分、約 ¥660，刷 Suica 即可。", legs: ["subway_higashihie_tenjin", "nishitetsu_tenjin_dazaifu"] },
         tips: [["info", "不想轉乘的備案：東比惠→博多後在博多 BT 搭『旅人』巴士直達太宰府（¥700、約 40 分）——但那是巴士；想搭地鐵就走上面的西鐵電車。"]],
         map: "太宰府駅 Dazaifu Station",
       },

@@ -307,8 +307,8 @@ img{max-width:100%;display:block}
 .prac{background:var(--paper-card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow-soft)}
 .prac h4{font-family:var(--serif);font-size:1.04rem;color:var(--indigo-deep);margin-bottom:9px;display:flex;align-items:center;gap:8px}
 .prac ul{list-style:none;display:grid;gap:6px}
-.prac li{font-size:.85rem;color:var(--ink-soft);display:flex;gap:7px;line-height:1.5}
-.prac li::before{content:"›";color:var(--coral);font-weight:700}
+.prac li{font-size:.85rem;color:var(--ink-soft);line-height:1.6;position:relative;padding-left:16px}
+.prac li::before{content:"›";color:var(--coral);font-weight:700;position:absolute;left:0;top:0}
 .prac li b{color:var(--ink)}
 
 /* ---------- footer ---------- */

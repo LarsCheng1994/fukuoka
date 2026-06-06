@@ -347,7 +347,7 @@ function TransitPage({ onBack }: { onBack: () => void }) {
         <div className="food-hero-inner">
           <div className="food-eyebrow">FUKUOKA · TRANSIT</div>
           <h1>每日交通總覽</h1>
-          <p>以 <b>東比惠（地下鐵空港線）</b> 為據點，盡量同線不換車。下面把每天的移動逐段列出（含班次・票價與回飯店）。時刻為查證時資料，出發前再確認。</p>
+          <p>以 <b>東比惠（地下鐵空港線）</b> 為據點，盡量同線不換車。<b>全程刷 Suica</b>；唯<b>新幹線（博多⇄小倉）</b>與<b>關門渡輪</b>需在售票機另外購票。下面把每天的移動逐段列出（含班次・票價與回飯店）。時刻為查證時資料，出發前再確認。</p>
         </div>
       </header>
       <div className="wrap food-wrap">
@@ -566,20 +566,12 @@ export default function App() {
           </Reveal>
           <Reveal className="prac-grid">
             <div className="prac">
-              <h4>💳 交通票券</h4>
+              <h4>💳 付款：Suica 為主</h4>
               <ul>
-                <li>IC 卡（SUGOCA／ICOCA／Suica）全程通用，最省心。</li>
-                <li>太宰府：地下鐵到天神轉西鐵電車（¥400、約 35 分，觀光列車「旅人」免加價）；竈門神社靠「まほろば号」¥100，皆可刷 IC／投現。</li>
-                <li>D2 關門路線混 JR西／JR九州／渡輪／巴士，<b>無單一票券完整涵蓋</b>，IC 卡實付即可。</li>
-                <li>除非多日跨城，JR Pass 此行多半不划算。</li>
-              </ul>
-            </div>
-            <div className="prac">
-              <h4>📱 必裝 App</h4>
-              <ul>
-                <li><b>西鉄電車・バス</b>／<b>にしてつバスナビ</b>：太宰府西鐵與まほろば号時刻查詢。</li>
-                <li><b>Google Maps</b>／<b>乗換案内</b>：即時轉乘與末班車。</li>
-                <li>各景點官網／KKday 憑證：行前再確認時段。</li>
+                <li><b>全程刷 Suica</b>：地下鐵、JR 在來線、西鐵電車、西鐵巴士／まほろば号都直接嗶卡，免買票。</li>
+                <li>⚠️ <b>新幹線 博多⇄小倉（D2）</b>：Suica 進不了新幹線閘口，需在售票機買<b>自由席券</b>（單程 ¥1,730、來回約 ¥3,460）；或改搭 JR 在來線快速（Suica 可、較慢約 1 小時）。</li>
+                <li>⚠️ <b>關門渡輪（D2，去回各 ¥400）</b>：在碼頭售票機買<b>乘船券</b>（備現金）。</li>
+                <li>門票另付：小倉城 ¥500、福岡塔展望台 ¥1,000（太宰府／竈門神社免費）；KKday 別府一日遊用線上憑證。</li>
               </ul>
             </div>
             <div className="prac">
